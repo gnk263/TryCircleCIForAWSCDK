@@ -51,6 +51,8 @@ jobs:
 
             npm run build
 
+            npm run cdksynth
+
   deploy:
     executor: my-executor
     parameters:
@@ -61,7 +63,7 @@ jobs:
       - checkout
       - restore
       - run:
-          name: sam-deploy
+          name: deploy
           command: |
             npm --version
             node --version
@@ -69,7 +71,7 @@ jobs:
 
             echo << parameters.env >>
 
-            npm run cdksynth
+            npm run cdkdeploy
 
 workflows:
   version: 2.1
