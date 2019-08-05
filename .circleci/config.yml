@@ -65,11 +65,11 @@ jobs:
           command: |
             npm --version
             node --version
-            cdk --version
+            npm run cdkversion
 
             echo << parameters.env >>
 
-            cdk synth
+            npm run cdksynth
 
 workflows:
   version: 2.1
