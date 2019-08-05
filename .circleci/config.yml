@@ -49,7 +49,7 @@ jobs:
 
             echo << parameters.env >>
 
-            npm run buiold
+            npm run build
 
   deploy:
     executor: my-executor
