@@ -4,6 +4,7 @@ executors:
     # https://circleci.com/docs/2.0/circleci-images/
     docker:
       - image: circleci/node:10.16.1
+      - image: circleci/python:3.6.5
     working_directory: ~/sample
 
 commands:
