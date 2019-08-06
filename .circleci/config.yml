@@ -3,8 +3,7 @@ executors:
   my-executor:
     # https://circleci.com/docs/2.0/circleci-images/
     docker:
-      - image: circleci/node:10.16.1
-      - image: circleci/python:3.6.5
+      - image: circleci/python:3.7.4-node
         environment:
           PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/sample
@@ -37,7 +36,6 @@ jobs:
       - run:
           name: install
           command: |
-            sudo pip install pipenv
             pipenv install
             npm install
       - save
